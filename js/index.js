@@ -94,11 +94,27 @@ const footer = document.querySelector('footer p');
 footer.textContent = siteContent.footer.copyright;
 
 const newLink1 = document.createElement('a');
-newLink1.textContent = 'New Link 1';
+newLink1.textContent = 'Dark Mode';
 newLink1.href = '#';
 document.querySelector('nav').prepend(newLink1);
 
 const newLink2 = document.createElement('a');
-newLink2.textContent = 'New Link 2';
+newLink2.textContent = 'Light Mode';
 newLink2.href = '#';
 document.querySelector('nav').appendChild(newLink2);
+
+const background = document.querySelector('body');
+
+// const darkMode = () => {
+// document.body.style.background = 'grey';
+// };
+
+newLink1.onclick = () => {
+  document.body.style.background = '#404040';
+  document.body.style.color = 'white';
+};
+
+newLink2.onclick = () => {
+  document.body.style.background = 'white';
+  document.body.style.color = 'black';
+};
